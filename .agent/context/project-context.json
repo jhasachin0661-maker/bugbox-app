@@ -1,0 +1,14 @@
+{
+  "project": {"name":"BUG//BOX","mode":"existing-repo","profile":"Full-Stack App","data_sensitivity":"HIGH"},
+  "stack":["Next.js 16","React 19","TypeScript","Tailwind CSS v4","Supabase"],
+  "commands":[
+    {"cmd":"npm.cmd run lint","verified":true,"last_exit":0},
+    {"cmd":"npm.cmd run build","verified":true,"last_exit":0},
+    {"cmd":"npm.cmd test","verified":false,"last_exit":null}
+  ],
+  "environment":{"target":"development"},
+  "task":"Transform the BUG//BOX prototype into a truthful production-oriented MVP per the supplied implementation prompt.",
+  "status":{"build":"VERIFIED","tests":"NOT VERIFIED","lint":"VERIFIED","types":"VERIFIED via build","security":"NOT VERIFIED"},
+  "knowledge":{"verified":["Next.js App Router routes compile successfully","Current API routes use Supabase anon client without auth","Replay route currently simulates execution","Schema currently disables RLS","Capture page records browser-side events and posts a Bug Box"],"assumptions":["Supabase project configuration may be supplied later; local build must remain usable without live credentials"]},
+  "decisions":[],"known_issues":["Live Supabase migration/auth/storage/replay worker are not verifiable without configured services"],"open_questions":["Supabase project URL/keys and GitHub OAuth credentials are needed for live integration verification"],"approvals":[],"next_actions":["Add request validation and explicit configuration errors","Remove unsafe public database grants and define ownership migration"]
+}
